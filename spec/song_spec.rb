@@ -1,3 +1,4 @@
+require 'pry'
 describe 'Song' do
   
   before(:example) {
@@ -68,7 +69,7 @@ describe 'Song' do
       song_2.artist_name = "Michael Jackson"
       expect(song_2.artist).to be_an(Artist)
       expect(song_2.artist.name).to eq("Michael Jackson")
-
+      #binding.pry
       expect(Artist.all.length).to eq(1)
     end
   end
